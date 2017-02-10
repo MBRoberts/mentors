@@ -12,7 +12,17 @@ class CreateUserMatchesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('matches', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('match_id')->unsigned();
+
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('match_id')->references('id')->on('users');
+            
+            
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +32,6 @@ class CreateUserMatchesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('matches');
     }
 }

@@ -18,9 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->longText('bio');
-            $table->integer('role');
-            $table->integer('cohort');
+            $table->integer('role_id')->unsigned();
+            $table->integer('cohort_id')->unsigned();
             $table->string('preference')->nullable();
+
+            $table->foreign('role_id')->references('id')->on('roles');
+            $table->foreign('cohort_id')->references('id')->on('cohorts');
+
             $table->rememberToken();
             $table->timestamps();
         });

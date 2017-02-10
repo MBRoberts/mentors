@@ -12,7 +12,12 @@ class CreateCohortsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('cohorts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('cohort');
+
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateCohortsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('cohorts');
     }
 }
