@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('auth.login');
 });
+
+
+Route::get('/user/{id}', function(){
+	return view('users.profile');
+});

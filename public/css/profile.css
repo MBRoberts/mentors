@@ -1,0 +1,196 @@
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150,150,150,1);
+}
+
+.fb-profile img.fb-image-lg{
+
+    z-index: 0;
+    width: 100%;  
+    margin-bottom: 10px;
+}
+
+
+.mast__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 50vh;
+    max-height: 330px;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: 50%;
+}
+
+canvas{
+    display:block;
+    vertical-align:bottom;
+}
+
+.crop{
+    width:100%;
+    height: 50vh;
+    max-height: 330px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(17, 17, 17, .6);
+    border-bottom: 2px solid black;
+}
+
+.fb-image-lg{
+    z-index: 0;
+    width: 100%;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.fb-image-profile
+{   
+    position: absolute;
+    top: 250px;
+    border: 2px solid black;
+    margin: -90px 10px 0px 50px;
+    z-index: 9;
+    width: 20%; 
+    border-radius: 50%;
+    filter: grayscale(50%);
+}
+
+.fb-profile-text{
+    position: absolute;
+    top: 190px;
+    left:25%;
+}
+
+@media (max-width:768px)
+{
+    
+.fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+}
+
+.fb-image-profile
+{
+    border: 2px solid white;
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%; 
+}
+}
+
+.mast__title {
+    font-family: "Cutive Mono", monospace;
+    margin: 0 0 0.5em;
+    line-height: 1.75em;
+    white-space: pre;
+    z-index: -1;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+.mast__title span {
+    animation: title-shimmer 2s 0s ease both;
+    animation-iteration-count: infinite;
+}
+
+.mast__text {
+    font-family: "Cutive Mono", monospace;
+    margin: 0 0 0.5em;
+    line-height: 1em;
+    white-space: pre;
+    z-index: -1;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.mast__text span {
+    -webkit-animation: letter-glow 0.7s 0s ease both;
+            animation: letter-glow 0.7s 0s ease both;
+}
+
+.letters {
+    z-index: 10;
+}
+
+.bio{
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 150px 50px;
+    width: 33%;
+    height: 30vh;
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px #222;
+
+}
+
+@-webkit-keyframes letter-glow {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+    }
+    66% {
+        opacity: 1;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+    }
+    77% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+    }
+}
+
+
+@keyframes letter-glow {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.1);
+    }
+    66% {
+        opacity: 1;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+    }
+    77% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
+    }
+}
+
+
+@keyframes title-shimmer {
+    0% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    }
+    66% {
+        opacity: .8;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+    }
+    75% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.6;
+        text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+    }
+}

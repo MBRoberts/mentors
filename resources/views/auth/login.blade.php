@@ -5,7 +5,7 @@
 @section('links')
     <script src="https://use.fontawesome.com/40d6d147db.js"></script>
     {{-- Custom CSS --}}
-    <link rel="stylesheet" href="/css/welcome.css">
+    <link rel="stylesheet" href="/css/login.css">
 @stop
 
 
@@ -25,22 +25,27 @@ ratio and a focus on real world project based learning,
 our graduates typically get hired within 6 months and 
 increase their earning power by $17K.
                         </p>
+                        <br>
                         
-                            <a href="#" id="login" class="mast__title title-span">Login</a>
-                            <a href="#" id="register" class="mast__title title-span">Register</a>
+                        <a href="#" id="login" class="mast__title title-span">Login</a>
+                        <a href="#" id="register" class="mast__title title-span">Register</a>
                        
                     </div>
+
                     <div id="login-form">
+                        <span class="fa-arrow-left"></span>
                         <h1 class="mast__title title-span">Login</h1>
                         <hr class="sep" style="margin: 0 auto">
                         <br />
                         <input type=text name="email" placeholder="Enter Email" />
 
-                        <input type="password" name="password" class="password" placeholder="Enter Password" /><span class="fa-eye"></span>
+                        <input type="password" name="password" class="password" placeholder="Enter Password" /><span class="fa-eye login-eye"></span>
 
                         <button type="submit">Login</button>
                     </div>
+
                     <div id="register-form">
+                        <span class="fa-arrow-left"></span>
                         <h1 class="mast__title title-span">Register</h1>
                         <hr class="sep" style="margin: 0 auto">
                         <br />
@@ -48,7 +53,7 @@ increase their earning power by $17K.
 
                         <input type="text" name="email" placeholder="Email">
 
-                        <input type="password" name="password" class="password" placeholder="Enter Password" /><span class="fa-eye"></span>
+                        <input type="password" name="password" class="password" placeholder="Enter Password" /><span class="fa-eye register-eye"></span>
 
                         <button type="submit">Register</button>
                     </div>
@@ -65,5 +70,5 @@ increase their earning power by $17K.
     {{-- Particles JS --}}
     <script type="text/javascript" src="/js/particles.js"></script>
     {{-- Custom JS --}}
-    <script src="/js/welcome.js"></script>
+    <script src="/js/login.js"></script>
 @stop

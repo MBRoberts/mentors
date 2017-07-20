@@ -1,9 +1,3 @@
-/* particlesJS('dom-id', params);
-/* @dom-id : set the html tag id [string, optional, default value : particles-js]
-/* @params: set the params [object, optional, default values : check particles.js] */
-
-/* config dom id (optional) + config particles params */
-
 particlesJS('particles-js', {
 	particles: {
 		color:'#000',
@@ -11,10 +5,10 @@ particlesJS('particles-js', {
 		opacity: 2,
 		size: 5,
 		size_random: true,
-		nb: 150,
+		nb: 50,
 		line_linked: {
 			enable_auto: true,
-			distance: 175,
+			distance: 200,
 			color: '#000',
 			opacity: 1,
 			width: 1,
@@ -86,41 +80,7 @@ var setAnimationDelay = function(letters, speed){
 
 }
 
-var callForm = function(form, index){
-	var div = document.getElementsByClassName('mast__header');
-	var welcome = document.getElementById('welcome');
-	var eye = document.getElementsByClassName('fa-eye')[index];
-	var password = document.getElementsByClassName('password')[index];
-	var toggle = 0;
-	
-	div[0].setAttribute('style', 'animation: div-collapse 4s .5s ease both');
-	
-	setTimeout(function(){
-		welcome.setAttribute('style', 'visibility: hidden;');
-		form.setAttribute('style', 'visibility: visible;');
-	},2000);
-
-	eye.addEventListener('click', function(e){
-		
-		password.type = (toggle % 2 == 0) ? 'text' : 'password';
-	
-		toggle++;
-	});
-};
-
 setSpans($('.text-span'), 'letter');
 setSpans($('.title-span'), 'title-letter');
 setAnimationDelay(document.getElementsByClassName('letter'), .02);
 setAnimationDelay(document.getElementsByClassName('title-letter'), .075);
-
-document.getElementById('login').addEventListener('click', function(){
-	var loginForm = document.getElementById('login-form');
-	callForm(loginForm, 0);
-});
-
-document.getElementById('register').addEventListener('click', function(){
-	var registerForm = document.getElementById('register-form');
-	callForm(registerForm, 1);
-})
-
-

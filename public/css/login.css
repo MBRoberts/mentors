@@ -78,6 +78,7 @@ body {
 	margin:5%;
 	z-index: -1;
 	overflow: hidden;
+	height: 375px;
 }
 
 .mast__title {
@@ -157,13 +158,33 @@ button{
 	margin: 20px;
 }
 
-span.fa-eye{
+span.login-eye{
 	color: rgba(255, 255, 255, .6);
 	font-size: 1.5em;
 	font-family: 'FontAwesome';
 	position: absolute;
 	bottom: 33%;
 	right: 26%;
+	z-index: 2;
+}
+
+span.register-eye{
+	color: rgba(255, 255, 255, .6);
+	font-size: 1.5em;
+	font-family: 'FontAwesome';
+	position: absolute;
+	bottom: 28%;
+	right: 26%;
+	z-index: 2;
+}
+
+span.fa-arrow-left{
+	color: rgba(255, 255, 255, .6);
+	font-size: 1.5em;
+	font-family: 'FontAwesome';
+	position: absolute;
+	top:20px;
+	left: 20px;
 	z-index: 2;
 }
 
@@ -251,30 +272,43 @@ span.fa-eye{
 	0%{
 		border-top: 1px solid rgba(255, 255, 255, 0);
 		border-bottom: 1px solid rgba(255, 255, 255, 0);
+		height: 375px;
 	}
 	15% {
 		border-top: 1px solid rgba(255, 255, 255, 0.5);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		height: 307px;
+		height: 375px;
 	}
-	45% {
+	100% {
 		border-top: 1px solid rgba(255, 255, 255, 0.5);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 		height: 0px;
-		margin-left: 5%;
 	}
-	55%{
+	
+}
+
+@keyframes div-open{
+	0%{
 		border-top: 1px solid rgba(255, 255, 255, 0.5);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		margin-left: 45%;
 		height: 0px;
+	}
+
+	50%{
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		height: 375px;
 		background-color: rgba(0,0,0,0);
 	}
 	100%{
-		border: 2px solid rgba(255, 255, 255, 0.5);
-		border-radius: 5px;
+		border-top: 1px solid rgba(255, 255, 255, 0);
+		border-bottom: 1px solid rgba(255, 255, 255, 0);
 		height: 375px;
-		margin-left: 45%;
-		background-color: rgba(0,0,0,.2);
+		background-color: rgba(0,0,0,0);
 	}
 }
+
+
+
+
+
